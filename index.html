@@ -1,19 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minha primeira página no ar</title>
+  <meta name="theme-color" content="#101321">
+  <meta name="description" content="Meu primeiro projeto publicado na internet: uma página para aprender, experimentar e acender novas ideias.">
+  <title>Minha página | Ideias que acendem</title>
   <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Minha primeira página no ar. RECEEEEEBA!!!</h1>
-  <p>Feita em HTML, CSS e JavaScript.</p>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Minha página, início">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>MINHA PÁGINA</span>
+      </a>
+      <span class="site-status"><span class="status-dot" aria-hidden="true"></span>Projeto em construção</span>
+    </header>
 
-  <p id="lampada" class="lampada">🌑</p>
-  <button id="interruptor" type="button">Ligar</button>
-  <p id="aviso">Luz apagada. Clique para acender e ver a página do lindo!.</p>
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">MEU PRIMEIRO PROJETO <span aria-hidden="true">·</span> 2026</p>
+          <h1 id="hero-title">Uma ideia,<br><span>mil possibilidades.</span></h1>
+          <p class="hero-description">Esta é minha primeira página publicada na internet. Um pequeno projeto para aprender, experimentar e acender novas ideias.</p>
 
-  <script src="script.js"></script>
+          <div class="hero-actions">
+            <button class="light-button" id="interruptor" type="button" aria-pressed="false" aria-controls="lampada aviso">
+              <span class="button-symbol" aria-hidden="true">◉</span>
+              <span id="button-label">Ligar a luz</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="light-status" id="aviso" aria-live="polite" aria-atomic="true">
+              <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+              <span id="aviso-text">Luz apagada</span>
+            </p>
+          </div>
+          <p class="hint">Experimente o interruptor e veja a página mudar.</p>
+        </div>
+
+        <div class="visual-panel">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="lamp-scene" id="lampada" aria-hidden="true">
+            <div class="lamp-halo"></div>
+            <span class="lamp-spark spark-one">✦</span>
+            <span class="lamp-spark spark-two">✧</span>
+            <span class="lamp-spark spark-three">·</span>
+            <div class="lamp-cord"></div>
+            <div class="lamp-shade"></div>
+            <div class="lamp-bulb"></div>
+            <div class="lamp-neck"></div>
+            <div class="lamp-stand"></div>
+            <div class="lamp-base"></div>
+            <div class="lamp-floor"></div>
+          </div>
+          <p class="visual-caption"><span></span> Pequenas ideias também iluminam</p>
+        </div>
+      </section>
+
+      <section class="feature-row" aria-label="Sobre este projeto">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">01</span>
+          <div>
+            <h2>Feito para aprender</h2>
+            <p>Cada detalhe é uma nova descoberta.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">02</span>
+          <div>
+            <h2>Feito por mim</h2>
+            <p>HTML, CSS, JavaScript e curiosidade.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">03</span>
+          <div>
+            <h2>Só o começo</h2>
+            <p>Mais ideias novas em breve.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Construído com curiosidade <span class="footer-star" aria-hidden="true">✦</span></span>
+      <span>© 2026 Minha página</span>
+    </footer>
+  </div>
 </body>
-</html>
+  </html>
